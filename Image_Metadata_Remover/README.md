@@ -1,4 +1,4 @@
-# Styx Image Metadata Remover
+# Image Metadata Remover (IMR)
 Removes metadata from png/jpg images.
 
 1) Download the IMR.jar file
