@@ -25,6 +25,10 @@ public class App {
         frame.setVisible(true);
     }
 
+    /**
+     * GUI Construction
+     * @return The GUI as a JFrame.
+     */
     private static JFrame buildFrame(){
 
         // Frame
@@ -83,6 +87,10 @@ public class App {
         return frame;
     }
 
+    /**
+     * When the search button is clicked
+     * Finds 
+     */
     private static void search(){
 
         // Verify string and directory
@@ -94,6 +102,7 @@ public class App {
             return;
         }
 
+        // Replace result text while searching
         resultLabel.setText("Searching...");
 
         // Get list of files from chosen directory
@@ -108,18 +117,28 @@ public class App {
 
                 try{
 
+                    // Open file
                     BufferedReader reader = new BufferedReader(new FileReader(file.getAbsolutePath()));
                     
+                    // Get 1st line
                     String line = reader.readLine();
+
+                    // Loop through each line
                     while(line != null){
+
                         line = line.toUpperCase();
+
+                        // If line contains string being searched for -> return result
                         if(line.contains(findStr)){
                             resultLabel.setText("Your string has been found in " + file.getName());
                             return;
                         }
+
+                        // Read next line
                         line = reader.readLine();
                     }
                 
+                    // Close file
                     reader.close();
 
                 } catch (IOException e){
