@@ -1,3 +1,5 @@
+# Styx String Finder
+
 How to use:
 
 1) Download the StringFinder.jar file
