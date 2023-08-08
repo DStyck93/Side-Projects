@@ -1,4 +1,4 @@
-# Styx String Finder
+# String Finder
 
 How to use:
 
